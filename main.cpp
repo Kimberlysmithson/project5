@@ -22,6 +22,7 @@ void gainslosses_stock(Portfolio & portfolio);
 void remove_stock(Portfolio & portfolio);
 void load(Portfolio & portfolio);
 void save(Portfolio & portfolio);
+void edit_stock(Stock & stock);
 
 int main()
 {
@@ -162,7 +163,25 @@ void load(Portfolio & portfolio)
     file.close();
 }
 
+//edit stock
+void edit_stock(Stock & stock)
+{
+    int choice;
 
+    //build the menu
+    cout << "1.) Add Information" << endl
+         << "2.) Edit Information" << endl
+       << "3.) Remove Information" << endl
+       << "4.) Previous Menu" << endl
+       << "Choice? ";
+    cin >> choice;
+
+    //display the stock information
+    do{
+
+    }
+    //
+}
 
 //buy a stock
 void buy_stock(Portfolio & portfolio)
