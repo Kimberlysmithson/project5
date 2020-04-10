@@ -1,0 +1,86 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0305
+header_name {.h}
+code_name {.cxx}
+class Gameoflife_UI {open
+} {
+  Function {Gameoflife_UI()} {open
+  } {
+    Fl_Window _window {
+      label {Game of Life} open
+      private xywh {-32000 -32000 640 540} type Double hide
+    } {
+      Fl_Group {} {open
+        private xywh {0 0 640 480}
+      } {
+        Fl_Box _gol_grid {
+          label {Grid Widget}
+          private xywh {0 0 640 480}
+          code0 {\#include "grid_widget.h"}
+          class Grid_widget
+        }
+      }
+      Fl_Group {} {open
+        private xywh {0 455 640 85}
+      } {
+        Fl_Button _go_button {
+          label Go
+          private xywh {280 495 80 25}
+        }
+        Fl_Button _go_clear {
+          label Clear
+          private xywh {195 495 80 25}
+        }
+        Fl_Button _random_button {
+          label Random
+          private xywh {110 495 80 25}
+        }
+        Fl_Button _save_button {
+          label Save
+          private xywh {450 495 80 25}
+        }
+        Fl_Button _load_button {
+          label Load
+          private xywh {365 495 80 25}
+        }
+      }
+    }
+    code {_gol_grid->cell_size(10);} {}
+  }
+  Function {show()} {
+    comment {show the window} open return_type void
+  } {
+    code {_window->show();} {}
+  }
+  Function {go_button()} {
+    comment {get the go button} open return_type {Fl_Button*}
+  } {
+    code {return _go_button;} {}
+  }
+  Function {clear_button()} {
+    comment {get the clear button} open return_type {Fl_Button*}
+  } {
+    code {return _clear_button;} {}
+  }
+  Function {random_button()} {
+    comment {get the random button} open return_type {Fl_Button*}
+  } {
+    code {return _random_button;} {}
+  }
+  Function {save_button()} {
+    comment {get the save button} open return_type {Fl_Button*}
+  } {
+    code {return _save_button;} {}
+  }
+  Function {load_button()} {
+    comment {get the load button} open return_type {Fl_Button*}
+  } {
+    code {return _load_buttton;} {}
+  }
+  Function {gol_grid()} {
+    comment {get the grid} open return_type {Grid_Widget *}
+  } {
+    code {return _gol_grid;} {selected
+    }
+  }
+}
